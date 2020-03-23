@@ -60,6 +60,7 @@ let index = (props) => {
                 <Sider trigger={null} collapsible collapsed={collapsed}>
                     <div className="logo"><Link to="/">{!collapsed ? intl.get("app_name") :
                         <Icon type="coffee"/>}</Link></div>
+                    {/*这个是引用的外部库，anup用户可以自行删除，使用antd的menu自己写*/}
                     <MenuUp collapsed={collapsed} routeData={routeData} history={history}/>
                 </Sider>
                 <Layout>
