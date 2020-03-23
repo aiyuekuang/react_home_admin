@@ -1,0 +1,58 @@
+@import "../../style/ztao";
+
+#components-layout-demo-custom-trigger .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+
+#components-layout-demo-custom-trigger .logo {
+  margin: 16px 0;
+  line-height: 32px;
+  color: #fff;
+  font-size: 16px;
+  //text-indent: 24px;
+  letter-spacing: 3px;
+  text-align: center;
+  i{
+    display: inline;
+  }
+  a{
+    //color: $lvse;
+    color: #fff;
+  }
+}
+
+.react_home_index {
+  height: 100vh;
+
+  > section {
+    height: 100%;
+  }
+}
+
+.react_home_admin_header {
+  @include hp();
+  padding: 0 24px;
+
+}
+
+.react_home_oppo_admin_header_r {
+  @include hp(row-reverse, row-reverse);
+  font-size: 12px;
+
+  > div {
+    margin-left: 14px;
+  }
+}
+
+.no_auth {
+  @include juzhong2();
+  height: 100vh;
+  font-size: 16px;
+}
