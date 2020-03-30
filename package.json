@@ -14,7 +14,7 @@
   "author": "ztao",
   "license": "ISC",
   "dependencies": {
-    "antd": "^3.26.7",
+    "antd": "^4.0.3",
     "anup": "^3.0.2",
     "axios": "^0.19.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
