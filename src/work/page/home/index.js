@@ -12,6 +12,7 @@ import {inject, observer} from 'mobx-react';
 import {MenuUp} from "anup";
 import {baseRoutes} from "../../router/data";
 import {history,Link} from "react-router-pro"
+import {CoffeeOutlined, DownOutlined, MenuUnfoldOutlined, MenuFoldOutlined} from "@ant-design/icons"
 
 
 const {Header, Sider, Content} = Layout;
@@ -59,25 +60,21 @@ let index = (props) => {
             <Layout>
                 <Sider trigger={null} collapsible collapsed={collapsed}>
                     <div className="logo"><Link to="/">{!collapsed ? intl.get("app_name") :
-                        <Icon type="coffee"/>}</Link></div>
-                    {/*这个是引用的外部库，anup用户可以自行删除，使用antd的menu自己写*/}
-                    <MenuUp collapsed={collapsed} routeData={routeData} history={history}/>
+                        <CoffeeOutlined/>}</Link></div>
+                    <MenuUp collapsed={collapsed} routeData={routeData} history={history}
+                            lang={locales.language.value}/>
                 </Sider>
                 <Layout>
                     <Header style={{background: '#fff', padding: 0}}>
                         <div className="react_home_admin_header">
-                            <div>
-                                <Icon
-                                    className="trigger"
-                                    type={collapsed ? 'menu-unfold' : 'menu-fold'}
-                                    onClick={() => changeCollapsed(!collapsed)}
-                                />
+                            <div onClick={() => changeCollapsed(!collapsed)}>
+                                {collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}
                             </div>
                             <div className="react_home_oppo_admin_header_r">
                                 <div>
                                     <Dropdown overlay={menu}>
                                         <Button>
-                                            {locales.language.label} <Icon type="down"/>
+                                            {locales.language.label} <DownOutlined/>
                                         </Button>
                                     </Dropdown>
                                 </div>
@@ -87,8 +84,6 @@ let index = (props) => {
                             </div>
                         </div>
                     </Header>
-                    <Breadcrumb style={{margin: '16px 24px'}}>
-                    </Breadcrumb>
                     <Content
                         style={{
                             margin: '0 24px 16px 24px',
