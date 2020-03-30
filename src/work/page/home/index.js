@@ -84,6 +84,8 @@ let index = (props) => {
                             </div>
                         </div>
                     </Header>
+                    <Breadcrumb style={{margin: '16px 24px'}}>
+                    </Breadcrumb>
                     <Content
                         style={{
                             margin: '0 24px 16px 24px',
